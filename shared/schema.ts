@@ -204,6 +204,8 @@ export const insertProjectSchema = createInsertSchema(projects).omit({
   id: true,
   createdAt: true,
   updatedAt: true,
+}).extend({
+  payment: z.string().optional(),
 });
 
 export const insertSubmissionSchema = createInsertSchema(submissions).omit({

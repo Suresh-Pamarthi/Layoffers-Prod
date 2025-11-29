@@ -56,7 +56,7 @@ const projectFormSchema = z.object({
   description: z.string().min(20, "Description must be at least 20 characters"),
   requirements: z.string().optional(),
   skills: z.string().optional(),
-  payment: z.string().min(1, "Payment is required"),
+  payment: z.string().optional(),
   difficulty: z.string().default("intermediate"),
   deadline: z.string().optional(),
   maxSubmissions: z.string().default("10"),
@@ -80,7 +80,7 @@ export default function CompanyDashboard() {
       description: "",
       requirements: "",
       skills: "",
-      payment: "",
+      payment: "0",
       difficulty: "intermediate",
       deadline: "",
       maxSubmissions: "10",
@@ -286,9 +286,9 @@ export default function CompanyDashboard() {
                         name="payment"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Payment (USD)</FormLabel>
+                            <FormLabel>Payment (USD, Optional)</FormLabel>
                             <FormControl>
-                              <Input type="number" placeholder="250" {...field} data-testid="input-project-payment" />
+                              <Input type="number" placeholder="0" {...field} data-testid="input-project-payment" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>

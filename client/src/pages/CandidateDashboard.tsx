@@ -96,7 +96,7 @@ export default function CandidateDashboard() {
                 Welcome back, {user?.firstName || "Candidate"}!
               </h1>
               <p className="text-muted-foreground">
-                Track your projects, earnings, and grow your portfolio.
+                Complete tasks, build your portfolio, and showcase your skills to companies.
               </p>
             </div>
             <Button asChild data-testid="button-browse-projects">
@@ -219,7 +219,7 @@ export default function CandidateDashboard() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2" data-testid="text-no-active">No Active Submissions</h3>
                     <p className="text-muted-foreground mb-6">
-                      Start working on projects to build your portfolio!
+                      Complete tasks to build your portfolio and showcase your skills!
                     </p>
                     <Button asChild>
                       <Link href="/projects">Browse Projects</Link>
@@ -253,9 +253,6 @@ export default function CandidateDashboard() {
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-muted-foreground">
                             Submitted {new Date(submission.createdAt!).toLocaleDateString()}
-                          </span>
-                          <span className="font-semibold text-primary">
-                            ${submission.project?.payment}
                           </span>
                         </div>
                       </CardContent>
