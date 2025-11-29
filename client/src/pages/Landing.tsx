@@ -155,127 +155,24 @@ export default function Landing() {
       </section>
       
       {/* How It Works */}
-      <section className="py-20" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-how-it-works-title">How LayOffers Works</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A simple, transparent process that connects skilled professionals with companies 
-              looking to hire based on real performance.
+      <section className="py-20 bg-gradient-to-b from-primary/5 to-background" id="how-it-works">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold" data-testid="text-how-it-works-title">How LayOffers Works</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed" data-testid="text-how-it-works-description">
+              LayOffers is a skills-based hiring platform that replaces resume screening with real-world challenges. Companies publish role-specific micro-tasks, candidates complete them, and our intelligent grading system automatically scores the submissions. This ranks applicants based on proven ability rather than CV keywords, reducing bias and identifying top talent faster.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-            {/* For Candidates */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Users className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold" data-testid="text-for-candidates">For Candidates</h3>
-              </div>
-              
-              <div className="space-y-6">
-                {[
-                  {
-                    step: "1",
-                    title: "Browse Real Projects",
-                    description: "Explore paid micro-projects that match your skills and interests.",
-                    icon: Target
-                  },
-                  {
-                    step: "2",
-                    title: "Complete & Get Paid",
-                    description: "Submit your work and receive payment upon approval.",
-                    icon: DollarSign
-                  },
-                  {
-                    step: "3",
-                    title: "Build Your Portfolio",
-                    description: "Earn ratings and showcase your completed projects.",
-                    icon: Award
-                  },
-                  {
-                    step: "4",
-                    title: "Get Hired",
-                    description: "Connect with recruiters impressed by your real work.",
-                    icon: Briefcase
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="flex gap-4 items-start" data-testid={`step-candidate-${item.step}`}>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">{item.title}</h4>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <Button className="mt-4" asChild data-testid="button-candidate-cta">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <Button size="lg" className="text-lg px-8 py-6" asChild data-testid="button-candidate-cta">
                 <a href="/api/login">
                   Start Your Journey
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-            </div>
-            
-            {/* Divider */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border" />
-            
-            {/* For Companies */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-12 w-12 rounded-full bg-chart-2/10 flex items-center justify-center">
-                  <Building2 className="h-6 w-6 text-chart-2" />
-                </div>
-                <h3 className="text-2xl font-bold" data-testid="text-for-companies">For Companies</h3>
-              </div>
-              
-              <div className="space-y-6">
-                {[
-                  {
-                    step: "1",
-                    title: "Post a Challenge",
-                    description: "Create a real-world project that tests the skills you need.",
-                    icon: FileCheck
-                  },
-                  {
-                    step: "2",
-                    title: "Review Submissions",
-                    description: "Evaluate candidate work on actual deliverables.",
-                    icon: CheckCircle
-                  },
-                  {
-                    step: "3",
-                    title: "Rate Candidates",
-                    description: "Provide feedback and identify top performers.",
-                    icon: Star
-                  },
-                  {
-                    step: "4",
-                    title: "Hire with Confidence",
-                    description: "Make offers to candidates proven by their work.",
-                    icon: Shield
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="flex gap-4 items-start" data-testid={`step-company-${item.step}`}>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-chart-2 text-white flex items-center justify-center font-bold">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">{item.title}</h4>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <Button variant="outline" className="mt-4" asChild data-testid="button-company-cta">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild data-testid="button-company-cta">
                 <a href="/api/login">
-                  Post Your First Project
+                  Post Your First Challenge
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
