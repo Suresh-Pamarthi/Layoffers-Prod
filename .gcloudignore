@@ -1,0 +1,53 @@
+# This file specifies files that are not uploaded to Google Cloud
+# when using `gcloud app deploy` or `gcloud builds submit`.
+#
+# If you would like to add files to the ignore list (optional), add
+# them to a .gcloudignore file in the root directory. Each line is
+# a file glob pattern relative to the root directory. Files in the
+# node_modules directory are always ignored, as are most hidden files
+# and Python files.
+
+# Files and directories specific to running locally
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+.env.local
+.env.*.local
+
+# Git and version control
+.git/
+.gitignore
+
+# Development and testing
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts (these are rebuilt in the container)
+dist/
+build/
+
+# Development tools and config
+vite.config.ts.*
+.replit
+replit.nix
+
+# Documentation
+README.md
+DEPLOYMENT_GUIDE.md
+*.md
+
+# Docker files (not needed in container)
+Dockerfile
+.dockerignore
+
+# Build scripts
+script/
+
+# Test files
+*.test.ts
+*.spec.ts

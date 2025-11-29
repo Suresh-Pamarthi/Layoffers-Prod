@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+.vscode
+.DS_Store
+dist
+build
+.env
+.env.local
+README.md
+DEPLOYMENT_GUIDE.md
+*.md
+.replit
+replit.nix
+.idea
+vite.config.ts.*
