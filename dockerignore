@@ -4,10 +4,12 @@ npm-debug.log
 .gitignore
 .vscode
 .DS_Store
-.env
-.env.local
 dist
 build
+.env
+.env.local
+README.md
+DEPLOYMENT_GUIDE.md
 *.md
 .replit
 replit.nix
